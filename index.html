@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3D SolarSys</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/solar.css">
+    <link rel="shortcut icon" href="./solar.png" type="image/x-icon">
+</head>
+<body>
+<div id="container" >
+    <!--Loading prompt-->
+    <div id="prompt">
+        <img src="res/loading/loading.gif" width="60%"/>
+        <h3>Solar System</h3>
+        <p>A mesmerizing journey around the solar system</p>
+        <p class="small">Tap on start 👇</p>
+        <a id="control" href="#" class="progress">Start</a>
+    </div>
+</div>
+<div>
+    <audio id="promptSound" src="res/prompt/ding.wav" />
+</div>
+<div id="info">
+    <a href="https://github.com/solarcg/SolarSys" target="_blank" rel="noopener">Solar System</a></div>
+    <!-- Libraries -->
+    <script src="js/libs/jquery-3.2.1.min.js"></script>
+    <script src="js/libs/three.min.js"></script>
+    <script src="js/libs/stats.min.js"></script>
+    <script src="js/libs/tween.min.js"></script>
+    <script src="js/renderers/Projector.js"></script>
+    <script src="js/renderers/CanvasRenderer.js"></script>
+    <script src="js/libs/OBJLoader.js"></script>
+    <script src="js/libs/MTLLoader.js"></script>
+    <script src="js/libs/GPUParticleSystem.js"></script>
+    <script src="js/libs/FirstPersonControls.js"></script>
+    <script src="js/index.js"></script>
+    <!-- Loaders -->
+    <script>var textureLoader = new THREE.TextureLoader();</script>
+    <script>var objLoader = new THREE.OBJLoader();</script>
+    <script>var mtlLoader = new THREE.MTLLoader();</script>
+    <!-- Shaders -->
+    <script src="js/shaders.js"></script>
+    <!-- Global timing -->
+    <script src="js/time.js"></script>
+    <!-- Camera parameters -->
+    <!-- Note: THREE.js camera is not in this script. -->
+    <!-- This file contains an object for calculating camera position. -->
+    <script src="js/cameraParameters.js"></script>
+    <!-- Celestial body abstract -->
+    <script src="js/CelestialBody.js"></script>
+    <!-- Orbit function -->
+    <script src="js/orbit.js"></script>
+    <!-- Data -->
+    <script src="js/data.js"></script>
+    <!-- Data -->
+    <!-- Planet loader -->
+    <!-- Animation -->
+    <script src="js/animation.js"></script>
+    <!-- Controls -->
+    <script src="js/control.js"></script>
+    <script src="js/libs/dat.gui.min.js"></script>
+    <!-- Initializers -->
+    <script src="js/main.js"></script>
+</body>
+</html>

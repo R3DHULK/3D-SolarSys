@@ -1,0 +1,172 @@
+body {
+    color: #ffffff;
+    font-family: "Segoe UI", Myriad, Helvetica, Arial, "DejaVu Sans", "Noto Sans CJK SC", "Source Han Sans SC", "思源黑体", "等线", "华文细黑", "微软雅黑";
+    font-size: 20px;
+    text-align: left;
+    background-color: #000000;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.small {
+    font-size: 12px;
+}
+
+#container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#info {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 5px;
+}
+
+h3, p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+img {
+    margin-top: 10px;
+    max-width:100% !important;
+    height:30% !important;
+}
+
+
+a {
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #ffffff;
+}
+
+.progress {
+    display: inline-block;
+    font-size: 18px;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    margin-top: 20px;
+    padding: 6px 70px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-radius: 15px;
+
+    background-color: transparent;
+
+    transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+}
+
+.progress:hover, .progress:focus {
+    box-shadow: 0px 0px 30px #ffffffaa;
+    transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+}
+
+.progress.in-progress,
+.progress.finished {
+    color: transparent !important;
+}
+
+.progress.in-progress:after,
+.progress.finished:after {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    padding-top: inherit;
+    color: #000000 !important;
+    left: 0;
+}
+
+/*	If the .in-progress class is set on the button, show the
+	contents of the data-loading attribute on the butotn */
+
+.progress.in-progress:after {
+    content: attr(data-loading);
+}
+
+/* The same goes for the .finished class */
+
+.progress.finished:after {
+    content: attr(data-finished);
+}
+
+/* The colorful bar that grows depending on the progress */
+
+.progress .tz-bar {
+    background-color: #ffffff;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+
+    border-radius: 0 0 2px 2px;
+
+    -webkit-transition: width 0.5s, height 0.5s;
+    -moz-transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s;
+}
+
+/* The bar can be either horizontal, or vertical */
+
+.progress .tz-bar.background-horizontal {
+    height: 100%;
+    border-radius: 2px;
+}
+
+.progress .tz-bar.background-vertical {
+    height: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 2px;
+}
+
+/*----------------------------
+	Color themes
+-----------------------------*/
+
+.progress.red {
+    background-color: #e6537d;
+    background-image: -webkit-linear-gradient(top, #e6537d, #df5179);
+    background-image: -moz-linear-gradient(top, #e6537d, #df5179);
+    background-image: linear-gradient(top, #e6537d, #df5179);
+}
+
+.progress.red .tz-bar {
+    background-color: #6876b4;
+}
+
+.progress.green {
+    background-color: #64c896;
+    background-image: -webkit-linear-gradient(top, #64c896, #5fbd8e);
+    background-image: -moz-linear-gradient(top, #64c896, #5fbd8e);
+    background-image: linear-gradient(top, #64c896, #5fbd8e);
+}
+
+.progress.green .tz-bar {
+    background-color: #9e81d6;
+}
+
+
